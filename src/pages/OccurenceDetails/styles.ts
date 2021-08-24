@@ -58,8 +58,8 @@ export const Square = styled.div<ContentProps>`
 `;
 
 export const Content = styled.div`
-  height: 100%;
-  margin: 40px 0 auto 0;
+  min-height: 100%;
+  margin: 40px 0 32px 0;
 `;
 
 export const Input = styled.input`
@@ -136,4 +136,16 @@ export const Button = styled.button`
   &:hover {
     filter: brightness(0.8);
   }
+`;
+
+export const Closed = styled.div`
+  height: 112px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: 500;
+  color: #000d16;
 `;

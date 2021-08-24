@@ -25,6 +25,7 @@ export type OccurrencesData = Record<
   {
     occurrence: Occurrence;
     user: User;
+    endedAt?: string | undefined;
   }
 >;
 

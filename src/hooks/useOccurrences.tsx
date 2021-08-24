@@ -22,6 +22,7 @@ export function useOccurrences() {
               id: key,
               occurrence: value.occurrence,
               user: value.user,
+              endedAt: value.endedAt,
             };
           }
         );

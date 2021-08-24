@@ -16,6 +16,7 @@ type Occurrence = {
   priority: string;
   equipmentCode: string;
   description: string;
+  date: string;
   status: string;
 };
 
@@ -35,6 +36,7 @@ export function Ocurrence() {
     priority: '',
     equipmentCode: '',
     description: '',
+    date: '',
     status: 'warning',
   });
 
@@ -65,6 +67,7 @@ export function Ocurrence() {
       priority: '',
       equipmentCode: '',
       description: '',
+      date: '',
       status: '',
     });
 
@@ -79,8 +82,13 @@ export function Ocurrence() {
     try {
       const occurrenceRef = database.ref('occurrences');
 
+      console.log(`occurrenceRef`, occurrenceRef);
+
       await occurrenceRef.push({
-        occurrence,
+        occurrence: {
+          ...occurrence,
+          date: new Date().toISOString(),
+        },
         user,
       });
 

@@ -28,6 +28,14 @@ export function OcurrenceDetails() {
     history.push('/dashboard');
   }
 
+  async function handleStatus() {
+    await database.ref(`occurrences/${occurrenceId}/occurrence`).update({
+      status: 'closed',
+    });
+
+    history.push('/dashboard');
+  }
+
   return (
     <Container>
       <S.Nav>
@@ -75,9 +83,17 @@ export function OcurrenceDetails() {
         </S.Field>
       </S.Content>
 
-      <S.Button type="button" onClick={handleEndOccurrence}>
-        Encerrar chamado
-      </S.Button>
+      {occurrence?.occurrence.status !== 'closed' && (
+        <S.Button
+          type="button"
+          onClick={() => {
+            handleEndOccurrence();
+            handleStatus();
+          }}
+        >
+          Encerrar chamado
+        </S.Button>
+      )}
     </Container>
   );
 }

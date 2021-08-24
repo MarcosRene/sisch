@@ -4,8 +4,10 @@ import { database } from '../services/firebase';
 
 import { Occurrences } from '../types';
 
+type Occurrence = Omit<Occurrences, 'id'>;
+
 export function useOccurrence(occurrenceId: string) {
-  const [occurrence, setOccurrence] = useState<Occurrences>();
+  const [occurrence, setOccurrence] = useState<Occurrence>();
 
   useEffect(() => {
     function getOccurrenceDetails() {
@@ -14,6 +16,8 @@ export function useOccurrence(occurrenceId: string) {
       occurrencesRef.once('value', (occurrence) => {
         if (occurrence.exists()) {
           const databaseOccurrence = occurrence.val();
+
+          console.log(`databaseOccurrence`, databaseOccurrence);
 
           setOccurrence(databaseOccurrence);
         }
