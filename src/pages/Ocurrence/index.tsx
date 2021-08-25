@@ -14,7 +14,7 @@ type Occurrence = {
   local: string;
   area: string;
   priority: string;
-  equipmentCode: string;
+  equipmentCode: number;
   description: string;
   date: string;
   status: string;
@@ -34,7 +34,7 @@ export function Ocurrence() {
     local: '',
     area: '',
     priority: '',
-    equipmentCode: '',
+    equipmentCode: 0,
     description: '',
     date: '',
     status: 'warning',
@@ -65,7 +65,7 @@ export function Ocurrence() {
       local: '',
       area: '',
       priority: '',
-      equipmentCode: '',
+      equipmentCode: 0,
       description: '',
       date: '',
       status: '',
@@ -155,7 +155,7 @@ export function Ocurrence() {
 
         <S.InputGroup>
           <S.Input
-            type="text"
+            type="number"
             placeholder="Tobamento"
             name="equipmentCode"
             value={occurrence.equipmentCode}

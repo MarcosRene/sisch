@@ -5,12 +5,8 @@ type BoxContentProps = {
 };
 
 export const Content = styled.div`
-  height: 100%;
+  height: calc(100% - 70px);
   margin-bottom: auto;
-
-  @media screen and (min-width: 576px) {
-    height: calc(100% - 70px);
-  }
 `;
 
 export const Nav = styled.div`
@@ -38,7 +34,6 @@ export const Stack = styled.div`
 `;
 
 export const Box = styled.div`
-  height: 100%;
   height: 80px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.09);
@@ -50,7 +45,6 @@ export const Box = styled.div`
 `;
 
 export const BoxContent = styled.div<BoxContentProps>`
-  height: 100%;
   height: 80px;
 
   display: flex;

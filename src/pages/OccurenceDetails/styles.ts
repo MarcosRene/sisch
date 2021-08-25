@@ -58,8 +58,7 @@ export const Square = styled.div<ContentProps>`
 `;
 
 export const Content = styled.div`
-  min-height: 100%;
-  margin: 40px 0 32px 0;
+  margin: 40px 0 0 0;
 `;
 
 export const Input = styled.input`
@@ -119,7 +118,7 @@ export const TextArea = styled.textarea`
 export const Button = styled.button`
   height: 50px;
   width: 100%;
-  margin: auto 0 0 0;
+  margin: 150px 0 0 0;
   border-radius: 4px;
 
   display: flex;

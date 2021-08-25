@@ -16,7 +16,7 @@ export const GoBack = styled(Link)`
 `;
 
 export const Form = styled.form`
-  height: 100%;
+  height: calc(100% - 155px);
 
   display: flex;
   flex-direction: column;
