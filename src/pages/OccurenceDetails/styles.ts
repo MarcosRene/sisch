@@ -135,6 +135,10 @@ export const Button = styled.button`
   &:hover {
     filter: brightness(0.8);
   }
+
+  @media screen and (max-width: 414px) {
+    margin: 108px 0 0 0;
+  }
 `;
 
 export const Closed = styled.div`

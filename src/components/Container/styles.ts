@@ -28,7 +28,7 @@ export const Content = styled.div`
   padding: 16px;
   margin: 0 auto;
 
-  /* @media screen and (max-width: 414px) {
+  @media screen and (max-width: 414px) {
     overflow-y: scroll;
-  } */
+  }
 `;
