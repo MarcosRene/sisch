@@ -6,7 +6,6 @@ import { Ocurrence } from '../pages/Ocurrence';
 import { OcurrenceList } from '../pages/OccurrenceList';
 import { OcurrenceDetails } from '../pages/OccurenceDetails';
 import { Success } from '../pages/Success';
-import { Teste } from '../pages/Teste';
 
 import Route from './Route';
 
@@ -17,8 +16,6 @@ export function Routes() {
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/ocurrences" component={OcurrenceList} isPrivate />
       <Route path="/new-ocurrence" component={Ocurrence} isPrivate />
-      <Route path="/teste3" component={Teste} isPrivate />
-      <Route path="/teste4" component={Teste} isPrivate />
       <Route path="/ocurrence/:id" component={OcurrenceDetails} isPrivate />
       <Route path="/success" component={Success} isPrivate />
     </Switch>
