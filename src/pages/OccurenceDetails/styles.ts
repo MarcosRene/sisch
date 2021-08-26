@@ -137,8 +137,8 @@ export const Button = styled.button`
     filter: brightness(0.8);
   }
 
-  @media screen and (max-width: 414px) {
-    margin: 108px 0 0 0;
+  @media screen and (min-width: 414px) {
+    margin: 250px 0 0 0;
   }
 `;
 
