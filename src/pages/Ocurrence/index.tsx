@@ -40,10 +40,6 @@ export function Ocurrence() {
     status: 'warning',
   });
 
-  useEffect(() => {
-    return;
-  }, []);
-
   function handleChange(
     event: ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -81,8 +77,6 @@ export function Ocurrence() {
 
     try {
       const occurrenceRef = database.ref('occurrences');
-
-      console.log(`occurrenceRef`, occurrenceRef);
 
       await occurrenceRef.push({
         occurrence: {
